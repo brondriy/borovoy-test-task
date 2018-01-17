@@ -11,98 +11,143 @@
   src: url(../fonts/OpenSans-Bold.ttf);
 }
 @font-face {
-  font-family: MuseoSansCyrl;
-  src: url(../fonts/MuseoSansCyrl.otf);
+  font-family: OpenSansItalic;
+  src: url(../fonts/OpenSans-Italic.ttf);
 }
-/* line 25, ../sass/style.scss */
+@font-face {
+  font-family: MuseoSansCyrl;
+  src: url("../fonts/museosanscyrl-webfont.eot");
+  src: url("../fonts/museosanscyrl-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/museosanscyrl-webfont.ttf") format("truetype");
+}
+/* line 33, ../sass/style.scss */
 html, body {
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
 }
 
-/* line 31, ../sass/style.scss */
+/* line 40, ../sass/style.scss */
 header {
   position: fixed;
   width: 100%;
   padding-left: 90px;
   padding-right: 90px;
   background: white;
-  z-index: 4;
+  z-index: 5;
 }
-/* line 39, ../sass/style.scss */
+/* line 48, ../sass/style.scss */
 header .container {
   height: 86px;
   padding: 0px;
 }
-/* line 44, ../sass/style.scss */
+/* line 53, ../sass/style.scss */
 header .container .row {
   display: flex;
   width: 100%;
   margin: auto;
 }
-/* line 52, ../sass/style.scss */
+/* line 61, ../sass/style.scss */
 header .logo {
   position: relative;
   float: left;
   flex: 1;
   top: 10px;
 }
-/* line 60, ../sass/style.scss */
+/* line 69, ../sass/style.scss */
 header .menu {
+  position: relative;
   align-self: center;
   float: right;
   font-family: OpenSans;
   cursor: default;
 }
-/* line 66, ../sass/style.scss */
+/* line 76, ../sass/style.scss */
 header .menu li {
   display: inline-block;
   margin-left: 30px;
   margin-right: 30px;
   font-size: 15,94pt;
 }
-/* line 74, ../sass/style.scss */
+/* line 84, ../sass/style.scss */
 header .menu li:last-child {
   margin-right: 0px;
 }
-/* line 79, ../sass/style.scss */
+/* line 89, ../sass/style.scss */
 header .menu a {
   color: black;
   text-decoration: none;
 }
-/* line 85, ../sass/style.scss */
+/* line 95, ../sass/style.scss */
 header .menu .active > a {
   color: red;
   font-family: OpenSansExtra;
 }
-/* line 91, ../sass/style.scss */
+/* line 101, ../sass/style.scss */
 header .menu .searchbutton {
   cursor: pointer;
-  opacity: .4;
+}
+/* line 106, ../sass/style.scss */
+header .menu .searchform {
+  display: none;
+  position: absolute;
+  top: 1px;
+  right: 30px;
+  align-items: center;
+}
+/* line 114, ../sass/style.scss */
+header .menu .searchform input[type="text"] {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  font-family: OpenSansItalic;
+}
+/* line 121, ../sass/style.scss */
+header .menu .searchform input[type="text"], header .menu .searchform input[type="submit"] {
+  outline: none;
+}
+/* line 126, ../sass/style.scss */
+header .menu .searchform input[type="submit"] {
+  border: none;
+  background-color: #FFF;
+  background-image: url(../img/search.png);
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 23px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 }
 
-/* line 99, ../sass/style.scss */
+/* line 140, ../sass/style.scss */
 .main {
   height: calc( 100% - 80px );
   width: 100%;
   padding: 0px;
 }
-/* line 105, ../sass/style.scss */
+/* line 146, ../sass/style.scss */
 .main .row {
   height: 100%;
   width: 100%;
   margin-left: 0px;
 }
-/* line 112, ../sass/style.scss */
+/* line 153, ../sass/style.scss */
 .main .slider, .main .page, .main .back {
   width: 100%;
   height: 100%;
 }
-/* line 118, ../sass/style.scss */
+/* line 159, ../sass/style.scss */
+.main .pages {
+  /*display: flex;*/
+  width: 100%;
+  white-space: nowrap;
+}
+/* line 166, ../sass/style.scss */
+.main .page {
+  display: inline-block;
+}
+/* line 171, ../sass/style.scss */
 .main .slider {
+  display: flex;
   position: relative;
 }
-/* line 122, ../sass/style.scss */
+/* line 176, ../sass/style.scss */
 .main .slider .arrow {
   display: flex;
   position: absolute;
@@ -111,8 +156,9 @@ header .menu .searchbutton {
   left: 0px;
   top: 0px;
   align-items: center;
+  z-index: 4;
 }
-/* line 132, ../sass/style.scss */
+/* line 187, ../sass/style.scss */
 .main .slider .arrow .img {
   width: 30px;
   height: 30px;
@@ -120,28 +166,30 @@ header .menu .searchbutton {
   margin: auto;
   cursor: pointer;
 }
-/* line 140, ../sass/style.scss */
+/* line 195, ../sass/style.scss */
 .main .slider .arrow .img:hover {
   background: url(../img/slider/arrow-red.png) no-repeat;
 }
-/* line 147, ../sass/style.scss */
+/* line 202, ../sass/style.scss */
 .main .slider .right {
   left: auto;
   right: 0px;
 }
-/* line 152, ../sass/style.scss */
+/* line 207, ../sass/style.scss */
 .main .slider .right .img {
   transform: rotate(180deg);
 }
-/* line 159, ../sass/style.scss */
+/* line 214, ../sass/style.scss */
 .main .pagenator {
   position: absolute;
   bottom: 10px;
+  left: 0px;
   width: 100%;
   text-align: center;
   cursor: default;
+  z-index: 4;
 }
-/* line 167, ../sass/style.scss */
+/* line 224, ../sass/style.scss */
 .main .pagenator .circle {
   display: inline-block;
   width: 10px;
@@ -152,41 +200,45 @@ header .menu .searchbutton {
   background-color: #bcbcbc;
   cursor: pointer;
 }
-/* line 179, ../sass/style.scss */
+/* line 236, ../sass/style.scss */
 .main .pagenator .active {
   background-color: #e54646;
 }
-/* line 185, ../sass/style.scss */
-.main .page[id="1"] > .back {
+/* line 242, ../sass/style.scss */
+.main .page {
+  position: relative;
+}
+/* line 247, ../sass/style.scss */
+.main .page > .back {
   bakground-color: black;
   background-image: url(../img/slider/1/back.jpg);
 }
-/* line 191, ../sass/style.scss */
+/* line 253, ../sass/style.scss */
 .main .back {
   padding-left: 90px;
   padding-right: 90px;
 }
-/* line 197, ../sass/style.scss */
+/* line 259, ../sass/style.scss */
 .main .col-md-6 {
   display: flex;
   height: calc( 100% - 80px );
   align-items: center;
 }
-/* line 203, ../sass/style.scss */
+/* line 265, ../sass/style.scss */
 .main .col-md-6 img {
   position: absolute;
   z-index: 3;
   right: 0px;
-  margin-top: 70px;
+  top: 30px;
 }
-/* line 212, ../sass/style.scss */
+/* line 274, ../sass/style.scss */
 .main .text {
   font-size: 41.81pt;
   line-height: 47pt;
   font-family: MuseoSansCyrl;
   margin-top: 30px;
 }
-/* line 220, ../sass/style.scss */
+/* line 282, ../sass/style.scss */
 .main .button {
   margin-top: 30px;
   background-color: #e54646;
@@ -201,7 +253,7 @@ header .menu .searchbutton {
   cursor: pointer;
 }
 
-/* line 236, ../sass/style.scss */
+/* line 298, ../sass/style.scss */
 footer {
   position: relative;
   width: 100%;
@@ -214,7 +266,7 @@ footer {
   font-family: OpenSansbold;
   z-index: 2;
 }
-/* line 248, ../sass/style.scss */
+/* line 310, ../sass/style.scss */
 footer .container {
   height: 100%;
   display: flex;
