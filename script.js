@@ -22,6 +22,12 @@ $(document).ready(function() {
 		}
 	});
 
+	/* меню */
+
+	$('.menuicon').click(function(){
+		$('.menu>ul').css('display', $('.menu>ul').css('display')=='block'?'none':'block');
+	});
+
 	/* слайдер */
 
 	$('.arrow.right').click(function(){

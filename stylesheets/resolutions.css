@@ -1,0 +1,185 @@
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  /* line 24, ../sass/resolutions.scss */
+  header {
+    padding-left: 10px;
+    padding-right: 0px;
+  }
+  /* line 29, ../sass/resolutions.scss */
+  header .container {
+    height: 50px;
+  }
+  /* line 33, ../sass/resolutions.scss */
+  header .container .menuicon {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/menu.svg);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: .4;
+    top: 0px;
+    right: 0px;
+    z-index: 4;
+  }
+  /* line 48, ../sass/resolutions.scss */
+  header .container .logo > a > img {
+    width: 80px;
+    position: absolute;
+    z-index: 4;
+  }
+  /* line 55, ../sass/resolutions.scss */
+  header .container ul {
+    margin-top: 9px;
+    display: none;
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    padding-right: 10px;
+    text-align: right;
+  }
+  /* line 68, ../sass/resolutions.scss */
+  header .container ul li {
+    display: block;
+    font-size: 17pt;
+  }
+  /* line 73, ../sass/resolutions.scss */
+  header .container ul .searchform {
+    top: 136px;
+    margin-right: 10px;
+  }
+
+  /* line 83, ../sass/resolutions.scss */
+  .main {
+    position: relative;
+    height: calc( 100% - 50px );
+  }
+  /* line 90, ../sass/resolutions.scss */
+  .main .back {
+    padding: 0px;
+  }
+  /* line 99, ../sass/resolutions.scss */
+  .main .slider .arrow .img {
+    margin-bottom: 5px;
+  }
+  /* line 105, ../sass/resolutions.scss */
+  .main .page:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 3;
+  }
+  /* line 118, ../sass/resolutions.scss */
+  .main .col-md-6 {
+    padding-left: 0px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  /* line 125, ../sass/resolutions.scss */
+  .main .col-md-6 img {
+    height: auto;
+    width: 90vw;
+    z-index: 0;
+    left: 20px;
+  }
+  /* line 133, ../sass/resolutions.scss */
+  .main .text {
+    position: absolute;
+    font-size: 7vw;
+    line-height: 7vw;
+    z-index: 4;
+    color: white;
+    width: 100%;
+    text-align: center;
+  }
+  /* line 142, ../sass/resolutions.scss */
+  .main .text .container {
+    padding: 5px;
+  }
+  /* line 148, ../sass/resolutions.scss */
+  .main .button {
+    margin: auto;
+    margin-top: 15px;
+    width: 140px;
+    height: 40px;
+    font-size: 8pt;
+    line-height: 40px;
+  }
+
+  /* line 159, ../sass/resolutions.scss */
+  footer {
+    padding-left: 10px;
+    height: 50px;
+    font-size: 10pt;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* line 169, ../sass/resolutions.scss */
+  header {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  /* line 174, ../sass/resolutions.scss */
+  header .container {
+    height: 50px;
+  }
+  /* line 178, ../sass/resolutions.scss */
+  header .container .logo > a > img {
+    width: 90px;
+  }
+  /* line 183, ../sass/resolutions.scss */
+  header .container li {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  /* line 189, ../sass/resolutions.scss */
+  header .container .searchform {
+    right: 10px;
+  }
+  /* line 193, ../sass/resolutions.scss */
+  header .container .searchform input[type='text'] {
+    width: 200px;
+  }
+
+  /* line 203, ../sass/resolutions.scss */
+  .main .back {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  /* line 208, ../sass/resolutions.scss */
+  .main .text {
+    font-size: 5vw;
+    line-height: 4vw;
+  }
+  /* line 218, ../sass/resolutions.scss */
+  .main .page .img img {
+    height: auto;
+    width: auto;
+    max-height: 100%;
+    max-width: 140%;
+  }
+  /* line 229, ../sass/resolutions.scss */
+  .main .button {
+    line-height: 60px;
+  }
+  /* line 237, ../sass/resolutions.scss */
+  .main .slider .arrow .img {
+    margin-bottom: 5px;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  /* line 248, ../sass/resolutions.scss */
+  header {
+    padding-left: 20px;
+    padding-right: 0px;
+  }
+}

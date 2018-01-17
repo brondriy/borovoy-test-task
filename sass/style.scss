@@ -35,6 +35,8 @@ html,body
 	width: 100%;
 	height: 100%;
 	overflow-x: hidden;
+	max-width: 1367px;
+	margin: auto;
 }
 
 header
@@ -45,6 +47,7 @@ header
 	padding-right: 90px;
 	background: white;
 	z-index: 5;
+	max-width: 1367px;
 	.container
 	{
 		height: 86px;
@@ -158,9 +161,12 @@ header
 
 	.pages
 	{
-		/*display: flex;*/
 		width: 100%;
+		height: 100%;
+		margin-left: 0px;
+		margin-right: 0px;
 		white-space: nowrap;
+		font-size: 0px;
 	}
 
 	.page
@@ -267,7 +273,7 @@ header
 			position: absolute;
 			z-index: 3;
 			right:0px;
-			top: 30px;
+			top: 20px;
 		}
 	}
 
@@ -277,6 +283,7 @@ header
 		line-height: 47pt;
 		font-family: MuseoSansCyrl;
 		margin-top: 30px;
+		white-space: normal;
 	}
 
 	.button
