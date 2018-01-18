@@ -1,9 +1,10 @@
 var indexpage = 1;
 var timerslider;
+var canslider = true;
 
 $(document).ready(function() {
 	
-	//timerslider = setTimeout(timerpage, 7500);
+	timerslider = setTimeout(timerpage, 7500);
 
 	/* поиск */
 	$('.searchbutton, .searchform>input[type="submit"]')
@@ -42,6 +43,8 @@ $(document).ready(function() {
 		changepage(false, $(this).index());
 	});
 
+
+	/* клоны в слайдере */
 	var original = document.getElementsByClassName('page')[0];
     var clone = original.cloneNode(true);
     clone.id = "5";
@@ -63,17 +66,15 @@ $(document).ready(function() {
     });
 });
 
-function timerpage()
-{
-	changepage(true, 1);
-	clearTimeout(timerslider);
-	timerslider = setTimeout(timerpage, 7500);
-}
-
 function changepage(fromcurrent, val)
 {
+	if( !canslider )
+		return;
+
 	clearTimeout(timerslider);
 	timerslider = setTimeout(timerpage, 7500);
+	canslider = false;
+	setTimeout(cansliderchange, 1500);
 	if( fromcurrent == true ) //через стрелки
 	{
 		if( indexpage==4 && val>0 ) //ЕСЛИ ПОСЛЕДНЯЯ СТРАНИЦА ПЕРЕКЛЮЧАЕМ НА КЛОН
@@ -171,10 +172,23 @@ function changepage(fromcurrent, val)
 		}
 		val += 1;
 		$('.circle.active').removeClass('active');
-		$('.circle:nth-child('+indexpage+')').addClass('active');
+		$('.circle:nth-child('+val+')').addClass('active');
 		$(query).animate({
 			left: (indexpage>val)?("+="+((indexpage-val)*100)+"%"):("-="+((val-indexpage)*100)+"%")
 		}, 1500);
 		indexpage = val;
 	}
+}
+
+function timerpage()
+{
+	changepage(true, 1);
+	clearTimeout(timerslider);
+	timerslider = setTimeout(timerpage, 7500);
+}
+
+
+function cansliderchange()
+{
+	canslider = true;
 }

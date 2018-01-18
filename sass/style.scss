@@ -121,6 +121,11 @@ header
 				font-family: OpenSansItalic;
 			}
 
+			input
+			{
+				border-radius: 0px;
+			}
+
 			input[type="text"], input[type="submit"]
 			{
 				outline: none;
